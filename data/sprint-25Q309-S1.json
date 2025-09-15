@@ -1,0 +1,79 @@
+{
+  "config": {
+    "id": "25Q309-S1",
+    "name": "Sprint 25Q309-S1",
+    "startDate": "2025-09-02",
+    "endDate": "2025-09-15",
+    "plannedItems": 55,
+    "totalStoryPoints": 98,
+    "sprintDays": 14
+  },
+  "metrics": {
+    "totalItems": 55,
+    "totalStoryPoints": 98,
+    "velocity": 38,
+    "completionRate": 39,
+    "dailyVelocity": 2.7,
+    "projectedCompletion": 76,
+    "successProbability": 85
+  },
+  "executiveSummary": {
+    "clinicalWorkflow": {
+      "title": "Enhanced Clinical Workflow",
+      "timeSavings": "15-20 minutes per case",
+      "storyPoints": 35,
+      "impact": "Reduced clinical documentation time",
+      "achievements": ["8 Features Completed", "12 User Experience Improvements"],
+      "valuePlaceholder": "Time savings value calculation needed - recommend tracking: cases per day × time saved × hourly clinical rate"
+    },
+    "mobilePlatform": {
+      "title": "Mobile Platform Foundation", 
+      "marketExpansion": "40M+ users addressable",
+      "storyPoints": 21,
+      "impact": "Spanish-speaking market access enabled",
+      "achievements": ["2 Mobile Screens", "Multi-language Support"],
+      "valuePlaceholder": "Market expansion value calculation needed - recommend tracking: potential user acquisition × average revenue per user"
+    },
+    "platformStability": {
+      "title": "Platform Stability & Performance",
+      "efficiencyGain": "60% reduction in user issues",
+      "storyPoints": 25,
+      "impact": "Improved system reliability and user satisfaction",
+      "achievements": ["8 Critical Bugs Fixed", "Performance Optimized"],
+      "valuePlaceholder": "Support cost savings calculation needed - recommend tracking: support tickets reduced × cost per ticket"
+    },
+    "innovation": {
+      "title": "Advanced Visualization Capability",
+      "competitiveAdvantage": "First-to-market 3D visualization",
+      "storyPoints": 2,
+      "impact": "Enhanced diagnostic capabilities for physicians",
+      "achievements": ["3D Model Integration", "Interactive Visualization"],
+      "valuePlaceholder": "Competitive advantage value calculation needed - recommend tracking: premium pricing potential × user adoption rate"
+    }
+  },
+  "teamPerformance": {
+    "William Larsen": { "points": 12, "items": 6, "themes": ["API Development", "Frontend"] },
+    "Brad Foley": { "points": 10, "items": 5, "themes": ["Backend", "Infrastructure"] },
+    "Josh Rogers": { "points": 8, "items": 4, "themes": ["DevOps", "Optimization"] },
+    "Samantha Sutton": { "points": 6, "items": 4, "themes": ["QA", "Testing"] },
+    "Apurva Kalvade": { "points": 5, "items": 3, "themes": ["API", "Multilingual"] },
+    "Jenish Dabhi": { "points": 4, "items": 3, "themes": ["Frontend", "Multilingual"] },
+    "Vaishnavi Chitara": { "points": 4, "items": 3, "themes": ["Backend", "Multilingual"] },
+    "Karan Mehta": { "points": 6, "items": 3, "themes": ["Mobile", "App Development"] }
+  },
+  "chartData": {
+    "statusDistribution": [13, 15, 8, 2, 4, 13],
+    "storyPointsByStatus": [38, 18, 24, 12, 8, 3],
+    "epicProgress": [35, 21, 15, 2],
+    "epicCompletionRates": [40, 60, 50, 100],
+    "forecastData": [38, 43, 49, 54, 76],
+    "themeDistribution": [35, 21, 18, 15, 9]
+  },
+  "insights": {
+    "criticalBlockers": "4 blocked items affecting core diagnosis functionality",
+    "velocityGap": "2.7 pts/day vs 7.0 target (need 61% increase)",
+    "successProbability": "85% chance of completing 70+ story points",
+    "valueTracking": "Add time/cost savings metrics for ROI measurement"
+  },
+  "archivedDate": "2025-09-15T12:00:00Z"
+}
