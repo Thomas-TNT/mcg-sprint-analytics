@@ -4,18 +4,25 @@
     "name": "Sprint 25Q309-S1",
     "startDate": "2025-09-02",
     "endDate": "2025-09-15",
-    "plannedItems": 55,
+    "plannedItems": 51,
     "totalStoryPoints": 98,
     "sprintDays": 14
   },
   "metrics": {
-    "totalItems": 55,
+    "totalItems": 51,
     "totalStoryPoints": 98,
     "velocity": 38,
-    "completionRate": 39,
+    "completionRate": 37.3,
     "dailyVelocity": 2.7,
     "projectedCompletion": 76,
-    "successProbability": 85
+    "successProbability": 85,
+    "blockedItems": 2,
+    "inProgressItems": 15,
+    "uatItems": 6,
+    "completedItems": 19,
+    "qaItems": 4,
+    "toDoItems": 7,
+    "readyForProdItems": 2
   },
   "executiveSummary": {
     "clinicalWorkflow": {
@@ -23,7 +30,7 @@
       "timeSavings": "15-20 minutes per case",
       "storyPoints": 35,
       "impact": "Reduced clinical documentation time",
-      "achievements": ["8 Features Completed", "12 User Experience Improvements"],
+      "achievements": ["19 Features Completed", "2 Critical Blockers Identified"],
       "valuePlaceholder": "Time savings value calculation needed - recommend tracking: cases per day × time saved × hourly clinical rate"
     },
     "mobilePlatform": {
@@ -62,15 +69,15 @@
     "Karan Mehta": { "points": 6, "items": 3, "themes": ["Mobile", "App Development"] }
   },
   "chartData": {
-    "statusDistribution": [13, 15, 8, 2, 4, 13],
+    "statusDistribution": [19, 15, 6, 7, 4, 2, 2],
     "storyPointsByStatus": [38, 18, 24, 12, 8, 3],
-    "epicProgress": [35, 21, 15, 2],
+    "epicProgress": [18, 7, 6, 5, 4, 2, 9],
     "epicCompletionRates": [40, 60, 50, 100],
     "forecastData": [38, 43, 49, 54, 76],
     "themeDistribution": [35, 21, 18, 15, 9]
   },
   "insights": {
-    "criticalBlockers": "4 blocked items affecting core diagnosis functionality",
+    "criticalBlockers": "2 blocked items affecting core diagnosis functionality",
     "velocityGap": "2.7 pts/day vs 7.0 target (need 61% increase)",
     "successProbability": "85% chance of completing 70+ story points",
     "valueTracking": "Add time/cost savings metrics for ROI measurement"
