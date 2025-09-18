@@ -319,9 +319,9 @@
             
             <!-- Status Overview -->
             <div class="status-overview" id="statusOverview">
-                <span class="status-badge badge-ready">System Ready</span>
-                <span class="status-badge badge-archived">1 Sprint Available</span>
-                <span class="status-badge badge-current">GitHub Pages Active</span>
+                <span class="status-badge badge-current">Sprint 25Q309-S1 Active</span>
+                <span class="status-badge badge-ready">37.3% Complete</span>
+                <span class="status-badge badge-archived">2 Blockers Identified</span>
             </div>
         </div>
 
@@ -359,18 +359,25 @@
                     name: 'Sprint 25Q309-S1',
                     startDate: '2025-09-02',
                     endDate: '2025-09-15',
-                    plannedItems: 55,
+                    plannedItems: 51,
                     totalStoryPoints: 98,
                     sprintDays: 14
                 },
                 metrics: {
-                    totalItems: 55,
+                    totalItems: 51,
                     totalStoryPoints: 98,
                     velocity: 38,
-                    completionRate: 39,
+                    completionRate: 37.3,
                     dailyVelocity: 2.7,
                     projectedCompletion: 76,
-                    successProbability: 85
+                    successProbability: 85,
+                    blockedItems: 2,
+                    inProgressItems: 15,
+                    uatItems: 6,
+                    completedItems: 19,
+                    qaItems: 4,
+                    toDoItems: 7,
+                    readyForProdItems: 2
                 },
                 executiveSummary: {
                     clinicalWorkflow: {
@@ -378,7 +385,7 @@
                         timeSavings: "15-20 minutes per case",
                         storyPoints: 35,
                         impact: "Reduced clinical documentation time",
-                        achievements: ["8 Features Completed", "12 User Experience Improvements"],
+                        achievements: ["19 Features Completed", "2 Critical Blockers Identified"],
                         valuePlaceholder: "Time savings value calculation needed - recommend tracking: cases per day × time saved × hourly clinical rate"
                     },
                     mobilePlatform: {
@@ -544,7 +551,7 @@
                     <h4 style="margin-bottom: 15px; color: #00d4ff;">Key Insights & Recommendations</h4>
                     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 15px;">
                         <div style="background: rgba(231, 76, 60, 0.1); border-left: 3px solid #e74c3c; padding: 15px; border-radius: 0 6px 6px 0;">
-                            <strong>[P1] Critical Blockers:</strong> 4 blocked items affecting core diagnosis functionality
+                            <strong>[P1] Critical Blockers:</strong> 2 blocked items affecting core diagnosis functionality
                         </div>
                         <div style="background: rgba(243, 156, 18, 0.1); border-left: 3px solid #f39c12; padding: 15px; border-radius: 0 6px 6px 0;">
                             <strong>[P2] Velocity Gap:</strong> 2.7 pts/day vs 7.0 target (need 61% increase)
@@ -632,10 +639,10 @@
                 new Chart(statusCtx, {
                     type: 'doughnut',
                     data: {
-                        labels: ['UAT', 'In Progress', 'To Do', 'Quality Assurance', 'Blocked', 'Done'],
+                        labels: ['Done', 'In Progress', 'UAT', 'To Do', 'Quality Assurance', 'Blocked', 'Ready for Prod'],
                         datasets: [{
-                            data: [13, 15, 8, 2, 4, 13],
-                            backgroundColor: ['#4834d4', '#f39c12', '#95a5a6', '#27ae60', '#e74c3c', '#00b894'],
+                            data: [19, 15, 6, 7, 4, 2, 2],
+                            backgroundColor: ['#00b894', '#f39c12', '#4834d4', '#95a5a6', '#27ae60', '#e74c3c', '#a29bfe'],
                             borderWidth: 0,
                             hoverBorderWidth: 2,
                             hoverBorderColor: '#ffffff'
