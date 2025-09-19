@@ -1,0 +1,203 @@
+{
+  "config": {
+    "id": "25Q309-S2",
+    "name": "Sprint 25Q309-S2",
+    "startDate": "2025-09-22",
+    "endDate": "2025-10-03",
+    "plannedItems": 38,
+    "totalStoryPoints": 38,
+    "sprintDays": 12
+  },
+  "metrics": {
+    "totalItems": 38,
+    "totalStoryPoints": 38,
+    "velocity": 0,
+    "completionRate": 0,
+    "dailyVelocity": 0,
+    "projectedCompletion": 0,
+    "successProbability": 15,
+    "blockedItems": 0,
+    "inProgressItems": 0,
+    "uatItems": 0,
+    "completedItems": 0,
+    "qaItems": 0,
+    "toDoItems": 38,
+    "readyForProdItems": 0
+  },
+  "executiveSummary": {
+    "securityCompliance": {
+      "title": "Security & Access Control",
+      "timeSavings": "60% reduction in role management time",
+      "storyPoints": 5,
+      "impact": "Server-enforced RBAC with comprehensive role management and audit trails",
+      "achievements": ["Role hierarchy and inheritance", "API endpoint protection", "Persona-driven UX", "Complete audit trail"],
+      "valuePlaceholder": "Security compliance value calculation needed - recommend tracking: audit cost savings × compliance risk reduction"
+    },
+    "marketExpansion": {
+      "title": "Global Market Access", 
+      "marketExpansion": "Spanish, French & Chinese markets",
+      "storyPoints": 4,
+      "impact": "End-to-end multilingual content with professional medical translation",
+      "achievements": ["Language switcher functionality", "Localized validations and PDFs", "Complete i18n/l10n implementation", "Professional medical translation"],
+      "valuePlaceholder": "Market expansion value calculation needed - recommend tracking: potential user acquisition × average revenue per user"
+    },
+    "operationalExcellence": {
+      "title": "DevOps & Infrastructure Modernization",
+      "efficiencyGain": "80% reduction in deployment time",
+      "storyPoints": 9,
+      "impact": "Docker containerization with automated CI/CD and environment parity",
+      "achievements": ["Docker containerization", "Automated CI/CD pipeline", "Blue-green deployments", "Pre-prod and demo environments"],
+      "valuePlaceholder": "Operational efficiency value calculation needed - recommend tracking: deployment time saved × developer productivity"
+    },
+    "technicalModernization": {
+      "title": "Platform Modernization",
+      "competitiveAdvantage": "TypeScript migration with zero downtime",
+      "storyPoints": 2,
+      "impact": "Technical debt reduction with modern patterns and improved developer productivity",
+      "achievements": ["TypeScript migration", "Consistent component patterns", "Modern tooling and patterns", "Zero downtime migration"],
+      "valuePlaceholder": "Technical debt reduction value calculation needed - recommend tracking: maintenance cost reduction × development velocity increase"
+    }
+  },
+  "teamPerformance": {
+    "William Larsen": { "points": 0, "items": 0, "themes": ["Planning Phase"] },
+    "Brad Foley": { "points": 0, "items": 0, "themes": ["Planning Phase"] },
+    "Josh Rogers": { "points": 0, "items": 0, "themes": ["Planning Phase"] },
+    "Samantha Sutton": { "points": 0, "items": 0, "themes": ["Planning Phase"] },
+    "Apurva Kalvade": { "points": 0, "items": 0, "themes": ["Planning Phase"] },
+    "Jenish Dabhi": { "points": 0, "items": 0, "themes": ["Planning Phase"] },
+    "Vaishnavi Chitara": { "points": 0, "items": 0, "themes": ["Planning Phase"] },
+    "Karan Mehta": { "points": 0, "items": 0, "themes": ["Planning Phase"] }
+  },
+  "chartData": {
+    "statusDistribution": [0, 0, 0, 38, 0, 0, 0],
+    "storyPointsByStatus": [0, 0, 0, 38, 0, 0],
+    "epicProgress": [5, 4, 4, 9, 5, 4, 2, 5],
+    "epicCompletionRates": [0, 0, 0, 0, 0, 0, 0, 0],
+    "forecastData": [0, 0, 0, 0, 0],
+    "epicBusinessImpact": [5, 4, 4, 9, 5, 4, 2, 5],
+    "epicRiskLevels": ["Medium", "Low", "High", "High", "Medium", "Medium", "High", "Low"],
+    "epicROI": [500000, 800000, 2000000, 300000, 1000000, 200000, 150000, 0],
+    "epicMarketImpact": [3, 4, 5, 2, 4, 2, 3, 1]
+  },
+  "insights": {
+    "criticalBlockers": "All 38 items in To Do status - sprint planning or execution issues",
+    "velocityGap": "0 pts/day vs 3.2 target (100% gap - immediate intervention required)",
+    "successProbability": "15% chance of completing sprint objectives",
+    "valueTracking": "Sprint represents $266,570 potential value but requires immediate execution focus"
+  },
+  "epicBreakdown": {
+    "Roles, Personas & Feature Gating": {
+      "items": 5,
+      "storyPoints": 5,
+      "status": "To Do",
+      "businessValue": "Server-enforced RBAC with comprehensive role management",
+      "riskLevel": "Medium",
+      "prdDetails": {
+        "vision": "Define org-level roles and personas; gate features & Admin with roles",
+        "successMetrics": ["100% server-enforced access control", "90%+ user satisfaction", "60% reduction in role management time"],
+        "targetUsers": ["System Administrators", "Clinical Users", "Compliance Officers"],
+        "keyFeatures": ["Role hierarchy and inheritance", "API endpoint protection", "Persona-driven UX", "Complete audit trail"],
+        "businessImpact": "Enhanced security, personalized UX, regulatory compliance, streamlined workflows"
+      }
+    },
+    "Multilanguage Enablement": {
+      "items": 4,
+      "storyPoints": 4,
+      "status": "To Do", 
+      "businessValue": "End-to-end multilingual content with Spanish, French & Chinese support",
+      "riskLevel": "Low",
+      "prdDetails": {
+        "vision": "End-to-end multilingual content: DB schema, APIs, Admin editing, rendering",
+        "successMetrics": ["100% UI translation for EN/SP/FR/ZH", "95%+ content translation coverage", "20%+ usage in non-English languages"],
+        "targetUsers": ["Spanish-speaking Healthcare Providers", "French-speaking Healthcare Providers", "Chinese-speaking Healthcare Providers"],
+        "keyFeatures": ["Language switcher functionality", "Localized validations and PDFs", "Complete i18n/l10n implementation", "Professional medical translation"],
+        "businessImpact": "Market expansion to Spanish/French/Chinese markets, improved accessibility, competitive advantage"
+      }
+    },
+    "Mobile Parity & Infrastructure": {
+      "items": 4,
+      "storyPoints": 4,
+      "status": "To Do",
+      "businessValue": "iOS backend integration and Android development initiation",
+      "riskLevel": "High",
+      "prdDetails": {
+        "vision": "Keep mobile in sync with platform changes (esp. multilingual) and ensure necessary infra",
+        "successMetrics": ["95%+ feature parity with web platform", "Mobile app load time < 3 seconds", "85%+ mobile user satisfaction"],
+        "targetUsers": ["Mobile Healthcare Providers", "Mobile Patients", "Field Staff"],
+        "keyFeatures": ["iOS backend integration", "Android development initiation", "Cross-device session continuity", "Mobile security compliance"],
+        "businessImpact": "Consistent cross-platform experience, expanded user base, mobile-first healthcare applications"
+      }
+    },
+    "DevOps & Deploy Modernization": {
+      "items": 9,
+      "storyPoints": 9,
+      "status": "To Do",
+      "businessValue": "Docker containerization with automated CI/CD and environment parity",
+      "riskLevel": "High",
+      "prdDetails": {
+        "vision": "Keep Front Door for now; move backend to Docker; fix deployment structure; enable slot deployments",
+        "successMetrics": ["80% reduction in deployment time", "100% parity between environments", "99%+ successful deployments"],
+        "targetUsers": ["DevOps Engineers", "Backend Developers", "QA Engineers"],
+        "keyFeatures": ["Docker containerization", "Automated CI/CD pipeline", "Blue-green deployments", "Pre-prod and demo environments"],
+        "businessImpact": "Reproducible builds, faster deployment cycles, reduced downtime, better testing environments"
+      }
+    },
+    "Database Migrations via ORM": {
+      "items": 5,
+      "storyPoints": 5,
+      "status": "To Do",
+      "businessValue": "Automated migration workflow with forward/backward compatibility",
+      "riskLevel": "Medium",
+      "prdDetails": {
+        "vision": "Introduce migration workflow so DB changes ship with code",
+        "successMetrics": ["100% automated migration success rate", "100% consistency across environments", "<5 minutes rollback capability"],
+        "targetUsers": ["Backend Developers", "DevOps Engineers", "Database Administrators"],
+        "keyFeatures": ["ORM-based migration system", "Forward and backward migrations", "Migration validation and testing", "Automated rollback on failure"],
+        "businessImpact": "Consistent database schema, automated rollback capabilities, reduced manual database management"
+      }
+    },
+    "Admin Consolidation": {
+      "items": 4,
+      "storyPoints": 4,
+      "status": "To Do",
+      "businessValue": "Unified application with role-based admin access",
+      "riskLevel": "Low",
+      "prdDetails": {
+        "vision": "Fold Admin into the main app behind role-based routes; remove duplicate Admin-only APIs",
+        "successMetrics": ["50% reduction in duplicate endpoints", "85%+ admin user satisfaction", "40% reduction in maintenance overhead"],
+        "targetUsers": ["System Administrators", "Content Managers", "Support Staff"],
+        "keyFeatures": ["Role-based access control", "Admin interface integration", "API consolidation", "Unified user experience"],
+        "businessImpact": "Operational efficiency, cost reduction, unified interface, centralized security"
+      }
+    },
+    "Architecture: V3 ➜ V4 In‑Place Rebuild": {
+      "items": 2,
+      "storyPoints": 2,
+      "status": "To Do",
+      "businessValue": "TypeScript migration with modern patterns and zero downtime",
+      "riskLevel": "High",
+      "prdDetails": {
+        "vision": "Incrementally rebuild the existing front-end and APIs in place (migrate legacy JSX to TypeScript)",
+        "successMetrics": ["90%+ TypeScript coverage", "100% of major surfaces migrated", "50% reduction in type-related runtime errors"],
+        "targetUsers": ["Frontend Developers", "Backend Developers", "QA Engineers"],
+        "keyFeatures": ["TypeScript migration", "Consistent component patterns", "Modern tooling and patterns", "Zero downtime migration"],
+        "businessImpact": "Technical debt reduction, improved developer productivity, better maintainability, enhanced performance"
+      }
+    },
+    "Bugs Reported-25Q309": {
+      "items": 5,
+      "storyPoints": 5,
+      "status": "To Do",
+      "businessValue": "Critical clinical workflow stability and user experience fixes",
+      "riskLevel": "High",
+      "prdDetails": {
+        "vision": "Address critical bugs affecting clinical workflows and user experience",
+        "successMetrics": ["100% critical bug resolution", "Improved user satisfaction", "Reduced support tickets"],
+        "targetUsers": ["Clinical Users", "Patients", "Support Staff"],
+        "keyFeatures": ["Diagnosis & Staging bug fixes", "Image/Whiteboard persistence", "Label loading corrections", "Page refresh issues"],
+        "businessImpact": "Enhanced clinical workflow stability, improved user experience, reduced support burden"
+      }
+    }
+  },
+  "archivedDate": null
+}
