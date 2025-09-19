@@ -71,10 +71,110 @@
   "chartData": {
     "statusDistribution": [19, 15, 6, 7, 4, 2, 2],
     "storyPointsByStatus": [38, 18, 24, 12, 8, 3],
-    "epicProgress": [18, 7, 6, 5, 4, 2, 9],
-    "epicCompletionRates": [40, 60, 50, 100],
+    "epicProgress": [35, 21, 25, 2, 8, 4, 3],
+    "epicCompletionRates": [40, 60, 50, 100, 30, 25, 20],
     "forecastData": [38, 43, 49, 54, 76],
     "themeDistribution": [35, 21, 18, 15, 9]
+  },
+  "epicBreakdown": {
+    "Enhanced Clinical Workflow": {
+      "items": 19,
+      "storyPoints": 35,
+      "status": "In Progress",
+      "businessValue": "Reduced clinical documentation time with 15-20 minutes per case savings",
+      "riskLevel": "Medium",
+      "prdDetails": {
+        "vision": "Streamline clinical workflows and reduce documentation time",
+        "successMetrics": ["15-20 minutes saved per case", "90%+ user satisfaction", "Reduced clinical documentation time"],
+        "targetUsers": ["Clinical Users", "Healthcare Providers", "Medical Staff"],
+        "keyFeatures": ["Enhanced workflow automation", "Streamlined documentation", "Clinical decision support"],
+        "businessImpact": "Improved clinical efficiency, reduced documentation burden, enhanced patient care"
+      }
+    },
+    "Mobile Platform Foundation": {
+      "items": 2,
+      "storyPoints": 21,
+      "status": "In Progress",
+      "businessValue": "Spanish-speaking market access enabled with 40M+ addressable users",
+      "riskLevel": "Low",
+      "prdDetails": {
+        "vision": "Establish mobile platform foundation for market expansion",
+        "successMetrics": ["2 Mobile Screens completed", "Multi-language Support", "40M+ users addressable"],
+        "targetUsers": ["Mobile Healthcare Providers", "Spanish-speaking Users", "Field Staff"],
+        "keyFeatures": ["Mobile screen development", "Multi-language support", "Mobile-first design"],
+        "businessImpact": "Market expansion, increased accessibility, mobile user engagement"
+      }
+    },
+    "Platform Stability & Performance": {
+      "items": 8,
+      "storyPoints": 25,
+      "status": "In Progress",
+      "businessValue": "Improved system reliability with 60% reduction in user issues",
+      "riskLevel": "High",
+      "prdDetails": {
+        "vision": "Enhance platform stability and performance",
+        "successMetrics": ["8 Critical Bugs Fixed", "Performance Optimized", "60% reduction in user issues"],
+        "targetUsers": ["All Users", "Support Staff", "System Administrators"],
+        "keyFeatures": ["Bug fixes", "Performance optimization", "System stability improvements"],
+        "businessImpact": "Improved user experience, reduced support burden, enhanced system reliability"
+      }
+    },
+    "Advanced Visualization Capability": {
+      "items": 2,
+      "storyPoints": 2,
+      "status": "Done",
+      "businessValue": "First-to-market 3D visualization for enhanced diagnostic capabilities",
+      "riskLevel": "Low",
+      "prdDetails": {
+        "vision": "Provide advanced visualization capabilities for physicians",
+        "successMetrics": ["3D Model Integration", "Interactive Visualization", "Enhanced diagnostic capabilities"],
+        "targetUsers": ["Physicians", "Radiologists", "Medical Specialists"],
+        "keyFeatures": ["3D model integration", "Interactive visualization", "Diagnostic enhancement"],
+        "businessImpact": "Competitive advantage, enhanced diagnostic capabilities, premium feature offering"
+      }
+    },
+    "API Development & Integration": {
+      "items": 6,
+      "storyPoints": 8,
+      "status": "In Progress",
+      "businessValue": "Enhanced API capabilities for better system integration",
+      "riskLevel": "Medium",
+      "prdDetails": {
+        "vision": "Develop and enhance API capabilities",
+        "successMetrics": ["API endpoints completed", "Integration success", "Performance improvements"],
+        "targetUsers": ["Developers", "Third-party Integrators", "System Administrators"],
+        "keyFeatures": ["API development", "Integration support", "Performance optimization"],
+        "businessImpact": "Better system integration, developer productivity, third-party connectivity"
+      }
+    },
+    "Multilingual Support": {
+      "items": 4,
+      "storyPoints": 4,
+      "status": "In Progress",
+      "businessValue": "Multi-language support for global market access",
+      "riskLevel": "Low",
+      "prdDetails": {
+        "vision": "Implement comprehensive multilingual support",
+        "successMetrics": ["Multi-language Support", "Localization complete", "User adoption"],
+        "targetUsers": ["International Users", "Non-English Speakers", "Global Healthcare Providers"],
+        "keyFeatures": ["Language support", "Localization", "Cultural adaptation"],
+        "businessImpact": "Global market access, user inclusivity, international expansion"
+      }
+    },
+    "Bug Fixes & Maintenance": {
+      "items": 3,
+      "storyPoints": 3,
+      "status": "In Progress",
+      "businessValue": "Critical bug fixes and system maintenance",
+      "riskLevel": "High",
+      "prdDetails": {
+        "vision": "Address critical bugs and maintain system stability",
+        "successMetrics": ["Critical bugs resolved", "System stability", "User satisfaction"],
+        "targetUsers": ["All Users", "Support Staff", "System Administrators"],
+        "keyFeatures": ["Bug fixes", "System maintenance", "Stability improvements"],
+        "businessImpact": "Improved user experience, reduced support tickets, system reliability"
+      }
+    }
   },
   "insights": {
     "criticalBlockers": "2 blocked items affecting core diagnosis functionality",
