@@ -119,6 +119,47 @@ body {
 .badge-archived { border-color: #a29bfe; background: rgba(162, 155, 254, 0.2); }
 .badge-ready { border-color: #00b894; background: rgba(0, 184, 148, 0.2); }
 
+/* Status Selector Styles */
+.status-selector-container {
+    display: flex;
+    align-items: center;
+}
+
+.status-selector {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    padding: 8px 16px;
+    color: #ffffff;
+    font-size: 0.85rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 140px;
+}
+
+.status-selector:focus {
+    outline: none;
+    border-color: #00d4ff;
+    box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.2);
+}
+
+.status-selector:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.status-selector option {
+    background: #2c3e50;
+    color: #ffffff;
+    padding: 10px;
+}
+
+/* Status-specific styling */
+.status-selector[value="planning"] { border-color: #f39c12; background: rgba(243, 156, 18, 0.2); }
+.status-selector[value="in-progress"] { border-color: #00d4ff; background: rgba(0, 212, 255, 0.2); }
+.status-selector[value="completed"] { border-color: #00b894; background: rgba(0, 184, 148, 0.2); }
+
 .dashboard-content {
     background: rgba(255, 255, 255, 0.1);
     backdrop-filter: blur(20px);
