@@ -25,6 +25,41 @@ const COLOR_SCHEMES = {
     team: ['#00d4ff', '#5b86e5', '#fd79a8', '#00cec9', '#fdcb6e', '#a29bfe', '#e17055', '#74b9ff']
 };
 
+// Sprint Status Manager
+const SprintStatusManager = {
+    // Get stored status for a sprint
+    getSprintStatus(sprintId) {
+        const stored = localStorage.getItem(`sprint_status_${sprintId}`);
+        return stored || 'planning'; // Default to planning
+    },
+
+    // Set status for a sprint
+    setSprintStatus(sprintId, status) {
+        localStorage.setItem(`sprint_status_${sprintId}`, status);
+    },
+
+    // Update status selector UI
+    updateStatusSelector(sprintId) {
+        const selector = document.getElementById('sprintStatusSelector');
+        const status = this.getSprintStatus(sprintId);
+        
+        selector.value = status;
+        
+        // Update visual styling based on status
+        selector.className = `status-selector status-${status}`;
+    },
+
+    // Get status display text
+    getStatusDisplayText(status) {
+        switch(status) {
+            case 'planning': return 'Planning Phase';
+            case 'in-progress': return 'In Progress';
+            case 'completed': return 'Completed';
+            default: return 'Planning Phase';
+        }
+    }
+};
+
 // Utility Functions
 const Utils = {
     showLoading() {
@@ -62,6 +97,20 @@ const Utils = {
             return label.substring(0, 15) + '...';
         }
         return label;
+    },
+
+    updateSprintHeader(sprintData) {
+        const sprintNameBadge = document.getElementById('sprintNameBadge');
+        const completionBadge = document.getElementById('completionBadge');
+        
+        // Update sprint name
+        sprintNameBadge.textContent = `${sprintData.config.name} Active`;
+        
+        // Update completion percentage
+        completionBadge.textContent = `${sprintData.metrics.completionRate}% Complete`;
+        
+        // Update status selector
+        SprintStatusManager.updateStatusSelector(sprintData.config.id);
     }
 };
 
@@ -488,6 +537,9 @@ const DashboardRenderer = {
         document.getElementById('placeholderContent').style.display = 'none';
         content.style.display = 'block';
         
+        // Update header with sprint-specific information
+        Utils.updateSprintHeader(sprintData);
+        
         // Render charts after DOM is updated
         setTimeout(() => {
             this.renderSprintCharts(sprintData);
@@ -550,6 +602,26 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('sprintSelector').addEventListener('change', function() {
         if (this.value !== 'current') {
             DashboardRenderer.renderSprintDashboard(this.value);
+        }
+    });
+
+    // Status selector change handler
+    document.getElementById('sprintStatusSelector').addEventListener('change', function() {
+        const currentSprint = document.getElementById('sprintSelector').value;
+        if (currentSprint !== 'current') {
+            const newStatus = this.value;
+            
+            // Save the status for this sprint
+            SprintStatusManager.setSprintStatus(currentSprint, newStatus);
+            
+            // Update the visual styling
+            this.className = `status-selector status-${newStatus}`;
+            
+            // Show notification
+            Utils.showNotification(
+                `Sprint ${currentSprint} status updated to ${SprintStatusManager.getStatusDisplayText(newStatus)}`, 
+                'success'
+            );
         }
     });
 });
