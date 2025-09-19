@@ -54,9 +54,15 @@
             
             <!-- Status Overview -->
             <div class="status-overview" id="statusOverview">
-                <span class="status-badge badge-current">Sprint 25Q309-S2 Active</span>
-                <span class="status-badge badge-ready">0% Complete</span>
-                <span class="status-badge badge-archived">Planning Phase</span>
+                <span class="status-badge badge-current" id="sprintNameBadge">Sprint 25Q309-S2 Active</span>
+                <span class="status-badge badge-ready" id="completionBadge">0% Complete</span>
+                <div class="status-selector-container">
+                    <select id="sprintStatusSelector" class="status-selector">
+                        <option value="planning">Planning Phase</option>
+                        <option value="in-progress">In Progress</option>
+                        <option value="completed">Completed</option>
+                    </select>
+                </div>
             </div>
         </div>
 
