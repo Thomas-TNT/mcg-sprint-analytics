@@ -174,15 +174,35 @@ const ChartRenderer = {
         });
     },
 
-    createEpicChart(ctx, data) {
+    createEpicChart(ctx, data, sprintData) {
+        // Generate dynamic labels based on sprint data
+        let labels, colors;
+        
+        if (sprintData.epicBreakdown) {
+            // Sprint 25Q309-S2 has detailed epic breakdown
+            labels = Object.keys(sprintData.epicBreakdown).map(label => Utils.formatLabel(label, 15));
+            colors = Object.values(sprintData.epicBreakdown).map(epic => {
+                switch(epic.riskLevel) {
+                    case 'High': return '#e74c3c';
+                    case 'Medium': return '#f39c12';
+                    case 'Low': return '#27ae60';
+                    default: return '#95a5a6';
+                }
+            });
+        } else {
+            // Sprint 25Q309-S1 has generic epic structure
+            labels = ['Clinical Workflow', 'Mobile Platform', 'Platform Stability', 'Innovation', 'API Development', 'Multilingual', 'Bugs'];
+            colors = ['#e74c3c', '#3498db', '#f39c12', '#9b59b6', '#27ae60', '#f39c12', '#e74c3c'];
+        }
+
         return new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: ['Roles & Security', 'Mobile Platform', 'DevOps', 'Architecture', 'Database', 'Admin', 'Bugs'],
+                labels: labels,
                 datasets: [{
                     label: 'Story Points',
                     data: data.epicProgress,
-                    backgroundColor: ['#e74c3c', '#3498db', '#f39c12', '#9b59b6', '#27ae60', '#f39c12', '#e74c3c'],
+                    backgroundColor: colors,
                     borderRadius: 6,
                     borderSkipped: false
                 }]
@@ -197,7 +217,12 @@ const ChartRenderer = {
                         grid: { color: 'rgba(255, 255, 255, 0.1)' }
                     },
                     x: {
-                        ticks: { color: 'rgba(255, 255, 255, 0.8)', maxRotation: 45 },
+                        ticks: { 
+                            color: 'rgba(255, 255, 255, 0.8)', 
+                            maxRotation: 45,
+                            minRotation: 0,
+                            font: { size: 11 }
+                        },
                         grid: { display: false }
                     }
                 },
@@ -205,9 +230,19 @@ const ChartRenderer = {
                     legend: { display: false },
                     tooltip: {
                         callbacks: {
+                            title: function(context) {
+                                if (sprintData.epicBreakdown) {
+                                    const fullLabel = Object.keys(sprintData.epicBreakdown)[context[0].dataIndex];
+                                    return fullLabel;
+                                }
+                                return context[0].label;
+                            },
                             afterLabel: function(context) {
                                 const completionRates = data.epicCompletionRates;
-                                return `${completionRates[context.dataIndex]}% complete`;
+                                if (completionRates && completionRates[context.dataIndex] !== undefined) {
+                                    return `${completionRates[context.dataIndex]}% complete`;
+                                }
+                                return '';
                             }
                         }
                     }
@@ -483,7 +518,7 @@ const DashboardRenderer = {
         // Epic Progress Chart
         const epicCtx = document.getElementById('epicChart');
         if (epicCtx) {
-            ChartRenderer.createEpicChart(epicCtx, sprintData.chartData);
+            ChartRenderer.createEpicChart(epicCtx, sprintData.chartData, sprintData);
         }
 
         // Sprint Completion Forecast Chart
