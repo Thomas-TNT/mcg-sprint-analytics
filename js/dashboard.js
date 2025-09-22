@@ -484,12 +484,12 @@ const DashboardRenderer = {
                 <!-- Main Charts Grid -->
                 <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 20px; margin-bottom: 25px;">
                     <div class="chart-container">
-                        <div class="chart-title">Sprint Status Distribution</div>
+                        <div class="chart-title">Story Count by Status</div>
                         <canvas id="statusChart"></canvas>
                     </div>
                     
                     <div class="chart-container">
-                        <div class="chart-title">Story Points by Status</div>
+                        <div class="chart-title">Story Points by Status (Estimates)</div>
                         <canvas id="storyPointsChart"></canvas>
                     </div>
                 </div>
