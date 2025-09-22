@@ -24,6 +24,22 @@
     "toDoItems": 7,
     "readyForProdItems": 2
   },
+  "storyStatus": {
+    "done": 7,
+    "carryOver": 7
+  },
+  "carryOver": {
+    "count": 7,
+    "items": [
+      { "issueKey": "MV30-2213", "summary": "Swagger for API", "status": "In Progress", "fromSprint": "25Q309-S1", "toSprint": "25Q309-S2" },
+      { "issueKey": "MV30-700", "summary": "Case: Functionality: Add \"Are you sure?\" Modal", "status": "In Progress", "fromSprint": "25Q309-S1", "toSprint": "25Q309-S2" },
+      { "issueKey": "MV30-1914", "summary": "Case: ALL: Next Steps: Update Next Steps pages", "status": "Quality Assurance (IN TEST)", "fromSprint": "25Q309-S1", "toSprint": "25Q309-S2" },
+      { "issueKey": "MV30-2215", "summary": "App Log in page", "status": "In Progress", "fromSprint": "25Q309-S1", "toSprint": "25Q309-S2" },
+      { "issueKey": "MV30-2204", "summary": "Handle multilingual images and icons", "status": "In Progress", "fromSprint": "25Q309-S1", "toSprint": "25Q309-S2" },
+      { "issueKey": "MV30-2203", "summary": "Convert static text to multilingual", "status": "In Progress", "fromSprint": "25Q309-S1", "toSprint": "25Q309-S2" },
+      { "issueKey": "MV30-2234", "summary": "Front-end Optimizations", "status": "Ready for Prod", "fromSprint": "25Q309-S1", "toSprint": "25Q309-S2" }
+    ]
+  },
   "executiveSummary": {
     "clinicalWorkflow": {
       "title": "Enhanced Clinical Workflow",
