@@ -98,6 +98,7 @@
             '25Q309-S2': {
                 config: { id: '25Q309-S2', name: 'Sprint 25Q309-S2', startDate: '2025-09-22', endDate: '2025-10-03', totalStoryPoints: 38 },
                 metrics: { totalStoryPoints: 38, velocity: 0, completionRate: 0, successProbability: 15 },
+                storyStatus: { carryOver: 7 },
                 executiveSummary: {
                     securityCompliance: { title: "Security & Access Control", timeSavings: "60% reduction in role management time", storyPoints: 5, impact: "Server-enforced RBAC with comprehensive role management", achievements: ["Role hierarchy", "API protection", "Audit trail"] },
                     marketExpansion: { title: "Global Market Access", marketExpansion: "Spanish, French & Chinese markets", storyPoints: 4, impact: "End-to-end multilingual content", achievements: ["Language switcher", "Localized content", "i18n implementation"] },
@@ -115,8 +116,9 @@
                     'Karan Mehta': { points: 0, items: 0, themes: ['Planning Phase'] }
                 },
                 chartData: {
-                    statusDistribution: [0, 0, 0, 38, 0, 0, 0],
-                    storyPointsByStatus: [0, 0, 0, 38, 0, 0],
+                    statusDistribution: [20, 12, 0, 39, 3, 1, 12],
+                    storyPointsByStatus: [20, 0, 12, 39, 1, 3],
+                    carryoverStoryPoints: 7,
                     epicProgress: [5, 4, 4, 9, 5, 4, 2, 5],
                     epicCompletionRates: [0, 0, 0, 0, 0, 0, 0, 0],
                     forecastData: [0, 0, 0, 0, 0]
@@ -125,12 +127,26 @@
                     criticalBlockers: "All 38 items in To Do status - sprint planning or execution issues",
                     velocityGap: "0 pts/day vs 3.2 target (100% gap - immediate intervention required)",
                     successProbability: "15% chance of completing sprint objectives",
-                    valueTracking: "Sprint represents $266,570 potential value but requires immediate execution focus"
+                    valueTracking: "Sprint represents $266,570 potential value but requires immediate execution focus",
+                    carryOverNote: "7 story carryovers imported from 25Q309-S1"
+                },
+                carryOver: {
+                    count: 7,
+                    items: [
+                        { issueKey: 'MV30-2213', summary: 'Swagger for API', status: 'In Progress', fromSprint: '25Q309-S1', toSprint: '25Q309-S2' },
+                        { issueKey: 'MV30-700', summary: 'Case: Functionality: Add "Are you sure?" Modal', status: 'In Progress', fromSprint: '25Q309-S1', toSprint: '25Q309-S2' },
+                        { issueKey: 'MV30-1914', summary: 'Case: ALL: Next Steps: Update Next Steps pages', status: 'Quality Assurance (IN TEST)', fromSprint: '25Q309-S1', toSprint: '25Q309-S2' },
+                        { issueKey: 'MV30-2215', summary: 'App Log in page', status: 'In Progress', fromSprint: '25Q309-S1', toSprint: '25Q309-S2' },
+                        { issueKey: 'MV30-2204', summary: 'Handle multilingual images and icons', status: 'In Progress', fromSprint: '25Q309-S1', toSprint: '25Q309-S2' },
+                        { issueKey: 'MV30-2203', summary: 'Convert static text to multilingual', status: 'In Progress', fromSprint: '25Q309-S1', toSprint: '25Q309-S2' },
+                        { issueKey: 'MV30-2234', summary: 'Front-end Optimizations', status: 'Ready for Prod', fromSprint: '25Q309-S1', toSprint: '25Q309-S2' }
+                    ]
                 }
             },
             '25Q309-S1': {
                 config: { id: '25Q309-S1', name: 'Sprint 25Q309-S1', startDate: '2025-09-02', endDate: '2025-09-15', totalStoryPoints: 98 },
                 metrics: { totalStoryPoints: 98, velocity: 38, completionRate: 37.3, successProbability: 85 },
+                storyStatus: { done: 7, carryOver: 7 },
                 executiveSummary: {
                     clinicalWorkflow: { title: "Enhanced Clinical Workflow", timeSavings: "15-20 minutes per case", storyPoints: 35, impact: "Reduced clinical documentation time", achievements: ["19 Features Completed", "2 Critical Blockers Identified"] },
                     mobilePlatform: { title: "Mobile Platform Foundation", marketExpansion: "40M+ users addressable", storyPoints: 21, impact: "Spanish-speaking market access enabled", achievements: ["2 Mobile Screens", "Multi-language Support"] },
@@ -159,6 +175,18 @@
                     velocityGap: "2.7 pts/day vs 7.0 target (need 61% increase)",
                     successProbability: "85% chance of completing 70+ story points",
                     valueTracking: "Add time/cost savings metrics for ROI measurement"
+                },
+                carryOver: {
+                    count: 7,
+                    items: [
+                        { issueKey: 'MV30-2213', summary: 'Swagger for API', status: 'In Progress', fromSprint: '25Q309-S1', toSprint: '25Q309-S2' },
+                        { issueKey: 'MV30-700', summary: 'Case: Functionality: Add "Are you sure?" Modal', status: 'In Progress', fromSprint: '25Q309-S1', toSprint: '25Q309-S2' },
+                        { issueKey: 'MV30-1914', summary: 'Case: ALL: Next Steps: Update Next Steps pages', status: 'Quality Assurance (IN TEST)', fromSprint: '25Q309-S1', toSprint: '25Q309-S2' },
+                        { issueKey: 'MV30-2215', summary: 'App Log in page', status: 'In Progress', fromSprint: '25Q309-S1', toSprint: '25Q309-S2' },
+                        { issueKey: 'MV30-2204', summary: 'Handle multilingual images and icons', status: 'In Progress', fromSprint: '25Q309-S1', toSprint: '25Q309-S2' },
+                        { issueKey: 'MV30-2203', summary: 'Convert static text to multilingual', status: 'In Progress', fromSprint: '25Q309-S1', toSprint: '25Q309-S2' },
+                        { issueKey: 'MV30-2234', summary: 'Front-end Optimizations', status: 'Ready for Prod', fromSprint: '25Q309-S1', toSprint: '25Q309-S2' }
+                    ]
                 }
             }
         };
