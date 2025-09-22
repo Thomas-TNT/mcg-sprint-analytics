@@ -142,14 +142,24 @@ const ChartRenderer = {
     },
 
     createStoryPointsChart(ctx, data) {
+        // Base labels and values
+        const labels = ['Done', 'UAT', 'In Progress', 'To Do', 'Blocked', 'QA'];
+        const values = Array.isArray(data.storyPointsByStatus) ? [...data.storyPointsByStatus] : [0,0,0,0,0,0];
+
+        // Optionally add Carryover category if provided
+        if (typeof data.carryoverStoryPoints === 'number') {
+            labels.push('Carryover');
+            values.push(data.carryoverStoryPoints);
+        }
+
         return new Chart(ctx, {
             type: 'bar',
             data: {
-                labels: ['Done', 'UAT', 'In Progress', 'To Do', 'Blocked', 'QA'],
+                labels: labels,
                 datasets: [{
                     label: 'Story Points',
-                    data: data.storyPointsByStatus,
-                    backgroundColor: COLOR_SCHEMES.status,
+                    data: values,
+                    backgroundColor: [...COLOR_SCHEMES.status, '#6c5ce7'],
                     borderRadius: 6,
                     borderSkipped: false
                 }]
@@ -513,6 +523,28 @@ const DashboardRenderer = {
                     ${this.renderTeamPerformance(sprintData.teamPerformance)}
                 </div>
             </div>
+
+            ${sprintData.carryOver ? `
+            <!-- Carryover Section -->
+            <div style="margin-bottom: 30px;">
+                <h3 style="text-align: center; margin-bottom: 15px; color: #ffffff; font-size: 1.5rem;">Carryover (${sprintData.carryOver.count})</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 12px;">
+                    ${sprintData.carryOver.items.map(item => `
+                        <div style=\"background: rgba(255, 255, 255, 0.05); border-radius: 6px; padding: 12px;\">
+                            <div style=\"display: flex; justify-content: space-between; align-items: center; margin-bottom: 6px;\">
+                                <strong style=\"color: #00d4ff;\">${item.issueKey}</strong>
+                                <span style=\"background: rgba(0, 212, 255, 0.15); border: 1px solid rgba(0, 212, 255, 0.3); color: #00d4ff; padding: 2px 8px; border-radius: 12px; font-size: 0.75rem;\">${item.status}</span>
+                            </div>
+                            <div style=\"color: rgba(255, 255, 255, 0.85); margin-bottom: 6px; font-size: 0.95rem;\">${item.summary}</div>
+                            <div style=\"color: rgba(255, 255, 255, 0.6); font-size: 0.8rem;\">
+                                <span style=\"background: rgba(255, 255, 255, 0.08); padding: 2px 8px; border-radius: 12px; margin-right: 6px;\">From: ${item.fromSprint}</span>
+                                <span style=\"background: rgba(255, 255, 255, 0.08); padding: 2px 8px; border-radius: 12px;\">To: ${item.toSprint}</span>
+                            </div>
+                        </div>
+                    `).join('')}
+                </div>
+            </div>
+            ` : ''}
 
             <!-- Action Items -->
             <div style="background: rgba(255, 255, 255, 0.05); border-radius: 8px; padding: 20px;">
