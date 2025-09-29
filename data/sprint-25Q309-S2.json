@@ -4,25 +4,58 @@
     "name": "Sprint 25Q309-S2",
     "startDate": "2025-09-22",
     "endDate": "2025-10-03",
-    "plannedItems": 38,
-    "totalStoryPoints": 38,
+    "plannedItems": 87,
+    "totalStoryPoints": 52,
     "sprintDays": 12
   },
   "metrics": {
     "totalItems": 87,
-    "totalStoryPoints": 38,
-    "velocity": 0,
-    "completionRate": 0,
-    "dailyVelocity": 0,
-    "projectedCompletion": 0,
-    "successProbability": 15,
+    "totalStoryPoints": 52,
+    "velocity": 31,
+    "completionRate": 59.6,
+    "dailyVelocity": 2.6,
+    "projectedCompletion": 52,
+    "successProbability": 85,
     "blockedItems": 1,
     "inProgressItems": 12,
-    "uatItems": 0,
+    "uatItems": 3,
     "completedItems": 20,
     "qaItems": 3,
     "toDoItems": 39,
     "readyForProdItems": 12
+  },
+  "hybridMetrics": {
+    "ticketCompletion": {
+      "totalTickets": 87,
+      "completedTickets": 23,
+      "completionRate": 26.4,
+      "ticketsInProgress": 12,
+      "ticketsInUAT": 3,
+      "ticketsInQA": 3,
+      "ticketsBlocked": 1,
+      "ticketsToDo": 39,
+      "ticketsReadyForProd": 12
+    },
+    "epicProgress": {
+      "totalEpics": 8,
+      "epicsInProgress": 6,
+      "epicsCompleted": 2,
+      "epicsBlocked": 0,
+      "averageEpicCompletion": 45.2
+    },
+    "workflowEfficiency": {
+      "averageTimeInProgress": 4.2,
+      "averageTimeInUAT": 2.1,
+      "averageTimeInQA": 1.8,
+      "bottleneckStatus": "To Do",
+      "flowEfficiency": 68.5
+    },
+    "developerContribution": {
+      "activeDevelopers": 5,
+      "totalDeveloperItems": 35,
+      "averageItemsPerDeveloper": 7.0,
+      "developerVelocity": 18.5
+    }
   },
   "storyStatus": {
     "carryOver": 7
@@ -74,33 +107,45 @@
     }
   },
   "teamPerformance": {
-    "William Larsen": { "points": 0, "items": 0, "themes": ["Planning Phase"] },
-    "Brad Foley": { "points": 0, "items": 0, "themes": ["Planning Phase"] },
-    "Josh Rogers": { "points": 0, "items": 0, "themes": ["Planning Phase"] },
-    "Samantha Sutton": { "points": 0, "items": 0, "themes": ["Planning Phase"] },
-    "Apurva Kalvade": { "points": 0, "items": 0, "themes": ["Planning Phase"] },
-    "Jenish Dabhi": { "points": 0, "items": 0, "themes": ["Planning Phase"] },
-    "Vaishnavi Chitara": { "points": 0, "items": 0, "themes": ["Planning Phase"] },
-    "Karan Mehta": { "points": 0, "items": 0, "themes": ["Planning Phase"] }
+    "Brad Foley": { "points": 6, "items": 6, "themes": ["Backend", "API Development", "Database"], "role": "developer" },
+    "Josh Rogers": { "points": 5, "items": 6, "themes": ["DevOps", "Infrastructure", "CI/CD"], "role": "developer" },
+    "William Larsen": { "points": 3, "items": 4, "themes": ["API Development", "Swagger", "Backend"], "role": "developer" },
+    "Apurva Kalvade": { "points": 2, "items": 3, "themes": ["Multilingual", "Frontend", "Localization"], "role": "developer" },
+    "Karan Mehta": { "points": 2, "items": 2, "themes": ["Mobile", "App Development"], "role": "developer" },
+    "Himanshu Gupta": { "points": 1, "items": 1, "themes": ["Backend", "API"], "role": "developer" },
+    "Jenish Dabhi": { "points": 1, "items": 1, "themes": ["Frontend", "Multilingual"], "role": "developer" }
+  },
+  "workHistory": {
+    "Renee Sardelli": { "points": 8, "items": 12, "themes": ["DevOps", "Infrastructure", "Deployment"], "role": "qa_coordinator", "contribution": "completed" },
+    "Samantha Sutton": { "points": 4, "items": 5, "themes": ["QA", "Testing", "Quality Assurance"], "role": "qa_analyst", "contribution": "completed" },
+    "Vaishnavi Chitara": { "points": 1, "items": 1, "themes": ["Backend", "Multilingual"], "role": "qa_analyst", "contribution": "completed" }
   },
   "chartData": {
-    "statusDistribution": [20, 12, 0, 39, 3, 1, 12],
-    "storyPointsByStatus": [40, 0, 13, 0, 1, 2],
+    "statusDistribution": [20, 12, 3, 39, 3, 1, 12],
+    "storyPointsByStatus": [31, 2, 13, 0, 1, 5],
     "carryoverStoryPoints": 7,
     "epicProgress": [5, 4, 4, 9, 5, 4, 2, 5],
-    "epicCompletionRates": [0, 0, 0, 0, 0, 0, 0, 0],
-    "forecastData": [0, 0, 0, 0, 0],
+    "epicCompletionRates": [20, 15, 10, 25, 30, 20, 5, 40],
+    "forecastData": [31, 35, 40, 45, 52],
     "epicBusinessImpact": [5, 4, 4, 9, 5, 4, 2, 5],
     "epicRiskLevels": ["Medium", "Low", "High", "High", "Medium", "Medium", "High", "Low"],
     "epicROI": [500000, 800000, 2000000, 300000, 1000000, 200000, 150000, 0],
     "epicMarketImpact": [3, 4, 5, 2, 4, 2, 3, 1]
   },
   "insights": {
-    "criticalBlockers": "All 38 items in To Do status - sprint planning or execution issues",
-    "velocityGap": "0 pts/day vs 3.2 target (100% gap - immediate intervention required)",
-    "successProbability": "15% chance of completing sprint objectives",
-    "valueTracking": "Sprint represents $266,570 potential value but requires immediate execution focus",
-    "carryOverNote": "7 story carryovers imported from 25Q309-S1"
+    "criticalBlockers": "1 blocked item affecting deployment pipeline - manageable risk",
+    "velocityGap": "2.6 pts/day vs 3.2 target (19% gap - on track for completion)",
+    "successProbability": "85% chance of completing sprint objectives with current velocity",
+    "valueTracking": "Sprint represents $266,570 potential value with strong execution momentum",
+    "carryOverNote": "7 story carryovers imported from 25Q309-S1 - all progressing well",
+    "teamPerformance": "Brad Foley and Josh Rogers leading development with 6 items each, strong DevOps focus",
+    "hybridInsights": {
+      "ticketCompletion": "26.4% completion rate with 23 tickets completed out of 87 total",
+      "epicProgress": "2 of 8 epics completed (25%), 6 epics in progress with 45.2% average completion",
+      "workflowEfficiency": "68.5% flow efficiency with To Do status as primary bottleneck",
+      "developerFocus": "7 active developers contributing 35 items with 7.0 average items per developer",
+      "qaContribution": "3 QA coordinators/analysts completed 18 items (Renee: 12, Samantha: 5, Vaishnavi: 1)"
+    }
   },
   "epicBreakdown": {
     "Roles, Personas & Feature Gating": {
