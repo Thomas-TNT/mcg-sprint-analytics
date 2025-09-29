@@ -48,6 +48,11 @@
                     <option value="25Q309-S1">Sprint 25Q309-S1 (Previous)</option>
                 </select>
                 
+                <select id="metricViewSelector" class="sprint-selector-main">
+                    <option value="hybrid">Pool-Based Metrics</option>
+                    <option value="traditional">Traditional Velocity</option>
+                </select>
+                
                 <button id="loadSprintBtn" class="control-btn">Load Sprint</button>
                 <button id="refreshDataBtn" class="control-btn">Refresh Data</button>
             </div>
@@ -84,6 +89,87 @@
                 </div>
             </div>
 
+            <!-- Hybrid Metrics Section -->
+            <div class="hybrid-metrics-section" id="hybridMetricsSection" style="display: none;">
+                <h2>Pool-Based Development Metrics</h2>
+                
+                <!-- Ticket Completion Metrics -->
+                <div class="metric-card">
+                    <h3>Ticket Completion</h3>
+                    <div class="metric-grid">
+                        <div class="metric-item">
+                            <span class="metric-value" id="ticketCompletionRate">26.4%</span>
+                            <span class="metric-label">Completion Rate</span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-value" id="completedTickets">23</span>
+                            <span class="metric-label">Completed Tickets</span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-value" id="totalTickets">87</span>
+                            <span class="metric-label">Total Tickets</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Epic Progress Metrics -->
+                <div class="metric-card">
+                    <h3>Epic Progress</h3>
+                    <div class="metric-grid">
+                        <div class="metric-item">
+                            <span class="metric-value" id="epicsCompleted">2</span>
+                            <span class="metric-label">Epics Completed</span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-value" id="epicsInProgress">6</span>
+                            <span class="metric-label">Epics In Progress</span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-value" id="averageEpicCompletion">45.2%</span>
+                            <span class="metric-label">Avg Epic Completion</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Developer Contribution Metrics -->
+                <div class="metric-card">
+                    <h3>Developer Contribution</h3>
+                    <div class="metric-grid">
+                        <div class="metric-item">
+                            <span class="metric-value" id="activeDevelopers">7</span>
+                            <span class="metric-label">Active Developers</span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-value" id="developerItems">35</span>
+                            <span class="metric-label">Developer Items</span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-value" id="avgItemsPerDev">7.0</span>
+                            <span class="metric-label">Avg Items/Developer</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Workflow Efficiency -->
+                <div class="metric-card">
+                    <h3>Workflow Efficiency</h3>
+                    <div class="metric-grid">
+                        <div class="metric-item">
+                            <span class="metric-value" id="flowEfficiency">68.5%</span>
+                            <span class="metric-label">Flow Efficiency</span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-value" id="bottleneckStatus">To Do</span>
+                            <span class="metric-label">Primary Bottleneck</span>
+                        </div>
+                        <div class="metric-item">
+                            <span class="metric-value" id="avgTimeInProgress">4.2</span>
+                            <span class="metric-label">Avg Days in Progress</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- Dynamic Sprint Content (Loaded via JavaScript) -->
             <div id="sprintContent" style="display: none;">
                 <!-- Sprint content will be dynamically loaded here -->
@@ -96,8 +182,8 @@
         // Minimal embedded data for offline fallback
         window.EMBEDDED_SPRINT_DATA = {
             '25Q309-S2': {
-                config: { id: '25Q309-S2', name: 'Sprint 25Q309-S2', startDate: '2025-09-22', endDate: '2025-10-03', totalStoryPoints: 38 },
-                metrics: { totalStoryPoints: 38, velocity: 0, completionRate: 0, successProbability: 15 },
+                config: { id: '25Q309-S2', name: 'Sprint 25Q309-S2', startDate: '2025-09-22', endDate: '2025-10-03', totalStoryPoints: 52 },
+                metrics: { totalStoryPoints: 52, velocity: 31, completionRate: 59.6, successProbability: 85 },
                 storyStatus: { carryOver: 7 },
                 executiveSummary: {
                     securityCompliance: { title: "Security & Access Control", timeSavings: "60% reduction in role management time", storyPoints: 5, impact: "Server-enforced RBAC with comprehensive role management", achievements: ["Role hierarchy", "API protection", "Audit trail"] },
@@ -106,29 +192,67 @@
                     technicalModernization: { title: "Platform Modernization", competitiveAdvantage: "TypeScript migration", storyPoints: 2, impact: "Technical debt reduction", achievements: ["TypeScript", "Modern patterns", "Zero downtime"] }
                 },
                 teamPerformance: {
-                    'William Larsen': { points: 0, items: 0, themes: ['Planning Phase'] },
-                    'Brad Foley': { points: 0, items: 0, themes: ['Planning Phase'] },
-                    'Josh Rogers': { points: 0, items: 0, themes: ['Planning Phase'] },
-                    'Samantha Sutton': { points: 0, items: 0, themes: ['Planning Phase'] },
-                    'Apurva Kalvade': { points: 0, items: 0, themes: ['Planning Phase'] },
-                    'Jenish Dabhi': { points: 0, items: 0, themes: ['Planning Phase'] },
-                    'Vaishnavi Chitara': { points: 0, items: 0, themes: ['Planning Phase'] },
-                    'Karan Mehta': { points: 0, items: 0, themes: ['Planning Phase'] }
+                    'Brad Foley': { points: 6, items: 6, themes: ['Backend', 'API Development', 'Database'], role: 'developer' },
+                    'Josh Rogers': { points: 5, items: 6, themes: ['DevOps', 'Infrastructure', 'CI/CD'], role: 'developer' },
+                    'William Larsen': { points: 3, items: 4, themes: ['API Development', 'Swagger', 'Backend'], role: 'developer' },
+                    'Apurva Kalvade': { points: 2, items: 3, themes: ['Multilingual', 'Frontend', 'Localization'], role: 'developer' },
+                    'Karan Mehta': { points: 2, items: 2, themes: ['Mobile', 'App Development'], role: 'developer' },
+                    'Himanshu Gupta': { points: 1, items: 1, themes: ['Backend', 'API'], role: 'developer' },
+                    'Jenish Dabhi': { points: 1, items: 1, themes: ['Frontend', 'Multilingual'], role: 'developer' }
+                },
+                workHistory: {
+                    'Renee Sardelli': { points: 8, items: 12, themes: ['DevOps', 'Infrastructure', 'Deployment'], role: 'qa_coordinator', contribution: 'completed' },
+                    'Samantha Sutton': { points: 4, items: 5, themes: ['QA', 'Testing', 'Quality Assurance'], role: 'qa_analyst', contribution: 'completed' },
+                    'Vaishnavi Chitara': { points: 1, items: 1, themes: ['Backend', 'Multilingual'], role: 'qa_analyst', contribution: 'completed' }
+                },
+                hybridMetrics: {
+                    ticketCompletion: {
+                        totalTickets: 87,
+                        completedTickets: 23,
+                        completionRate: 26.4,
+                        ticketsInProgress: 12,
+                        ticketsInUAT: 3,
+                        ticketsInQA: 3,
+                        ticketsBlocked: 1,
+                        ticketsToDo: 39,
+                        ticketsReadyForProd: 12
+                    },
+                    epicProgress: {
+                        totalEpics: 8,
+                        epicsInProgress: 6,
+                        epicsCompleted: 2,
+                        epicsBlocked: 0,
+                        averageEpicCompletion: 45.2
+                    },
+                    workflowEfficiency: {
+                        averageTimeInProgress: 4.2,
+                        averageTimeInUAT: 2.1,
+                        averageTimeInQA: 1.8,
+                        bottleneckStatus: 'To Do',
+                        flowEfficiency: 68.5
+                    },
+                    developerContribution: {
+                        activeDevelopers: 7,
+                        totalDeveloperItems: 35,
+                        averageItemsPerDeveloper: 7.0,
+                        developerVelocity: 18.5
+                    }
                 },
                 chartData: {
-                    statusDistribution: [20, 12, 0, 39, 3, 1, 12],
-                    storyPointsByStatus: [40, 0, 13, 0, 1, 2],
+                    statusDistribution: [20, 12, 3, 39, 3, 1, 12],
+                    storyPointsByStatus: [31, 2, 13, 0, 1, 5],
                     carryoverStoryPoints: 7,
                     epicProgress: [5, 4, 4, 9, 5, 4, 2, 5],
-                    epicCompletionRates: [0, 0, 0, 0, 0, 0, 0, 0],
-                    forecastData: [0, 0, 0, 0, 0]
+                    epicCompletionRates: [20, 15, 10, 25, 30, 20, 5, 40],
+                    forecastData: [31, 35, 40, 45, 52]
                 },
                 insights: {
-                    criticalBlockers: "All 38 items in To Do status - sprint planning or execution issues",
-                    velocityGap: "0 pts/day vs 3.2 target (100% gap - immediate intervention required)",
-                    successProbability: "15% chance of completing sprint objectives",
-                    valueTracking: "Sprint represents $266,570 potential value but requires immediate execution focus",
-                    carryOverNote: "7 story carryovers imported from 25Q309-S1"
+                    criticalBlockers: "1 blocked item affecting deployment pipeline - manageable risk",
+                    velocityGap: "2.6 pts/day vs 3.2 target (19% gap - on track for completion)",
+                    successProbability: "85% chance of completing sprint objectives with current velocity",
+                    valueTracking: "Sprint represents $266,570 potential value with strong execution momentum",
+                    carryOverNote: "7 story carryovers imported from 25Q309-S1 - all progressing well",
+                    teamPerformance: "Renee Sardelli leading with 12 items, strong DevOps focus across team"
                 },
                 carryOver: {
                     count: 7,
